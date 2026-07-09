@@ -14,9 +14,30 @@ class Codechef{
 	  static void solve(vector<int>&vs,int r, string s){	
 
 	      }
-	  static void solve(){
-		 // tempreture drop 
-		
+	  static void  sayHello(string s){
+
+		 cout<<"Hello, "<<s;
+
+	  }
+
+	  static void datatypes(int init, long long longs,char ch, float flt,double d){
+
+		    cout<<init<<endl;
+		    cout<<longs<<endl;
+		    cout<<ch<<endl;
+		    cout<<flt<<endl;
+		    cout<<d<<endl;
+		    
+	  }
+
+	  static void calsi(long long  a,long long  b){
+
+		   cout<<a<<" + "<<b<<" = "<<a+b<<endl;
+		   long long  ans=1;
+		   ans=a*b;
+		   cout<<a<<" * "<<b<<" = "<<ans<<endl;
+		   cout<<a<<" - "<<b<<" = "<<a-b<<endl;
+
 	  }
 	  static void inputarr(){
  
@@ -35,7 +56,6 @@ class Codechef{
 			 cin>>x;
 			 t.push_back(x);
 		   }
-
 		    cin>>s;
 		    solve(t,r,s);
 		    t.clear();
@@ -43,16 +63,18 @@ class Codechef{
 	    }
 	 static void input(){
 
-		   int T;
-		   cin>>T;
+			  string s;
+			  int init;
+			  long long longs;
+			  char ch;
+			  float flt;
+			  double d;
 
-		     while(T--){
-			 int x,y;
-			 int z;
-			 int A,B;
-			 cin>>x>>y;
-		       	 solve(x,y);
-                       }
+			  long long  a;
+			  long long  b;
+			  cin>>a>>b;
+			  calsi(a,b);
+
 		    }	     
 };
 int main(){
