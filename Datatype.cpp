@@ -20,7 +20,6 @@ class Codechef{
 		 cout<<"Hello, "<<s;
 
 	  }
-
 	  static void datatypes(int init, long long longs,char ch, float flt,double d){
 
 		    cout<<init<<endl;
@@ -28,7 +27,6 @@ class Codechef{
 		    cout<<ch<<endl;
 		    cout<<flt<<endl;
 		    cout<<d<<endl;
-		    
 	  }
 
 	  static void calsi(long long  a,long long  b){
@@ -44,9 +42,7 @@ class Codechef{
 	  static void difference(long long a,long long b,long long c,long long d){
 
 		  long long ans=0;
-
 		  ans=(a*b)-(c*d);
-
 		  cout<<"Difference"<<" = "<<ans;
 	  }
 
@@ -71,7 +67,6 @@ class Codechef{
 
 		  long long ans=0;
 		  ans=n*(n+1)/2;
-
 		  cout<<ans;
 	}
 
@@ -112,7 +107,6 @@ class Codechef{
 
 		  cout<<mini<<" "<<maxi<<endl;
 
-	
 	}
 
 	static void Bro(string f1,string s1,string f2,string s2){
