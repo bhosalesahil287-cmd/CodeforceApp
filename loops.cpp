@@ -27,15 +27,11 @@ class Codechef{
 			cout<<-1<<endl;
 			return;
 		     }
-
                    for(long long i=2;i<=n;i+=2){       
 			   cout<<i<<endl;
 		   }
-
           }
-
 	  static void countx(){
-                  
 	     }
 
 	  static void fixpassword(){
@@ -63,7 +59,6 @@ class Codechef{
 	  static void tablex(int x){
 
 		 for(int i=1;i<=12;i++){
-
 			cout<<x<<" * "<<i<<" = "<<x*i<<endl;
 		 }
 	  }
@@ -75,7 +70,6 @@ class Codechef{
 		    for(int i=1;i<=n;i++){
 			  fact=fact*i;
 			}
-
 		    cout<<fact<<endl;
 	  }
 
@@ -147,7 +141,6 @@ class Codechef{
 	    }
 
 	   static gcds(int a,int b){
-
 		   
 	   }
 

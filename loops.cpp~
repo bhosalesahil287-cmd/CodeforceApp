@@ -148,13 +148,7 @@ class Codechef{
 
 	   static gcds(int a,int b){
 
-		   int ans2=0;
-		  while(b!=0){
-		       int ans=a%b;
-		       ans2=a;
-		       a/=b;
-		     }
-		  cout<<ans2<<endl;
+		   
 	   }
 
 	  static void inputarr(){
