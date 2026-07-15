@@ -1,0 +1,209 @@
+#include <bits/stdc++.h>
+#include<utility>
+#define MOD1  1000000007
+#define MOD2  1000000009 
+#define MODADD(a,b) a+b % MOD1
+#define MODSUB(a,b,MOD1) a+b+MOD1 % MOD1 
+#define MODMUL(l,a,b,MOD1) 1LL * a * b%MOD1 
+#define  P  31      
+typedef long long ll;
+using namespace std;
+class Codechef{
+
+	public:
+	  static void sumation(long long arr[],int n){	
+
+		  int sums=0;
+		  for(long long i=0;i<n;i++){
+			 sums+=arr[i];
+		    }
+			 
+		  cout<<abs(sums);
+
+	      }
+	  static void solve(long long T){
+		 
+		 
+		 long long sums=0;
+
+		 while(T!=0){
+	             int k;
+		     cin>>k;
+		    sums+=k;
+		    T--;
+		 }
+
+                cout<<abs(sums);
+		
+	  }
+
+	  static void search(vector<long long>&vs,long long target){
+
+
+		     for(long long  i=0;i<vs.size()-1;i++){
+			   if(vs[i]==target){
+				cout<<i<<endl;
+				return;
+			   }
+			 }
+
+		     cout<<-1;
+	  }
+
+	  static void replaceof(vector<long long>&vs){
+
+		  for(long long i=0;i<vs.size();i++){
+			 if(vs[i]==0){
+			     vs[i]=0;
+			  }else if(vs[i]>0){
+			      vs[i]=1;
+			  }else if(vs[i]<0){
+			      vs[i]=2;
+			  }
+		    }
+		   for(int i:vs){
+			 cout<<i<<" ";
+			}
+	  }
+
+	  static void Arrpos(vector<long long>&vs){
+
+		  for(long long i=0;i<vs.size();i++){
+			  if(vs[i]<=10){
+			     cout<<"A["<<i<<"]"<<" = "<<vs[i]<<endl;
+		      } 
+	           }
+  	 }
+
+	  static void lowestNumber(int T){
+		  
+	  }
+
+	  static void reverseof(vector<long long>&vs){
+
+		 long long left=0;
+		 long long right=vs.size()-1;
+
+		 while(left<right){
+			 long long temp=vs[right];
+			 vs[right]=vs[left];
+			 vs[left]=temp;
+			 left++;
+			 right--;
+		  }
+	  }
+
+	  static void palindromArr(vector<long long >&vs){
+
+		  long long left=0;
+		  long long right=vs.size()-1;
+		  bool ispalindrom=true;
+
+		  while(left<right){
+			 if(vs[left]!=vs[right]){
+				ispalindrom=false;
+				break;
+			     }
+			 left++;
+			 right--;
+		  }
+		  if(ispalindrom){
+			 cout<<"YES";
+		  }else{
+			 cout<<"NO";
+		   }
+	  
+	  }
+
+	  static void sortings(vector<long long>&vs){
+	
+	       for(long long j=0;j<vs.size();j++){
+
+		  for(long long i=0;i<vs.size()-j-1;i++){
+			  if(vs[i]>vs[i+1]){
+			     swap(vs[i],vs[i+1]);
+			    }
+		    }
+	       }
+
+
+	  }
+
+	  static void smallestPair(vector<long long>&vs){
+
+
+	  }
+
+	  static void luckyArr(vector<long long>&vs){
+		
+		  long long count=0;
+		  long long  mins=vs[0];
+
+		    for(long long  i:vs){
+			    mins=min(mins,i);
+			}
+			      for(long long i:vs){
+			            if(i==mins)
+			               count++;
+		                 }
+
+		   if(count%2==1){
+			cout<<"Lucky";
+		    }else{
+			cout<<"Unlucky";
+		    }
+
+	  }
+
+	  static void sumofDigit(long long n,long long x){
+
+		 long long sums=0;
+
+		   for(long long i=0;i<=n;i++){
+
+			  long long ans=x%10;
+			  sums+=ans;
+			  x/=10;
+			}
+
+		   cout<<sums<<endl;
+	  }
+	  static void inputarr(){
+
+ 
+	//	 int T;
+		// cin>>T;
+
+		 //while(T--){
+	         long long n;
+		 long long  r;
+		 string s;
+                 vector<long long>t;
+		 long long arr[100];
+
+		 cin>>n;
+		 for(long long i=0;i<n;i++){	 
+			 long long x;
+			 cin>>x;
+			 t.push_back(x);
+		   }
+
+		  luckyArr(t);
+
+	       }
+	 static void input(){
+
+		    long long n;
+		    long long x;
+		    cin>>n;
+		    cin>>x;
+		    sumofDigit(n,x);
+
+
+		    }	     
+};
+int main(){
+
+	 Codechef::input();
+
+}

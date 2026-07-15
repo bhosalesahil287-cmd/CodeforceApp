@@ -11,19 +11,20 @@ using namespace std;
 class Codechef{
 
 	public:
-	  static void solve(){	
+	  static void solve(vector<int>&vs,int r, string s){	
 
 	      }
-	  static void Sums(vector<long long>&vs){
-		
-		   long long sums=0;
+	  static void solve(int n){
+		 
+		   while(n!=0){
 
-		   for(long long i:vs){
-			 sums+=i;
-			}
+			 int k=n%10;
+			 sums+=k;
+			 n/10;
+		     }
 
 		   cout<<sums<<endl;
-	     }
+	  }
 	  static void inputarr(){
  
 		 int T;
@@ -34,14 +35,15 @@ class Codechef{
 		 int r;
 		 string s;
 		 cin>>n;
-                 vector<long long>t;
+                 vector<int>t;
 		 for(int i=0;i<n;i++){
 			 int x;
 			 cin>>x;
 			 t.push_back(x);
 		   }
 
-		    Sums(t);
+		    cin>>s;
+		    solve(t,r,s);
 		    t.clear();
 	        } 
 	    }
@@ -49,13 +51,20 @@ class Codechef{
 
 		   int T;
 		   cin>>T;
+
 		     while(T--){
-			
+			 int x,y;
+			 int z;
+			 int A,B;
+			 int nsize;
+			 cin>>nsize;
+			 cin>>s
+		       	 solve(x,y);
                        }
 		    }	     
 };
 int main(){
 
-	 Codechef::inputarr();
+	 Codechef::input();
 
 }
