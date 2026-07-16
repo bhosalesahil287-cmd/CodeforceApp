@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 #include<utility>
+#include<map>
 #define MOD1  1000000007
 #define MOD2  1000000009 
 #define MODADD(a,b) a+b % MOD1
@@ -99,7 +100,184 @@ class Codechef{
 			right--;
 		  }
 	   }
+	  static void issorted(vector<long long>&vs){
 
+		  bool isSorted=true;
+		  for(long long i=0;i<vs.size();i++){
+			  if(vs[i]>vs[i+1]){
+			      isSorted=false;
+			      break;
+			     }
+			}
+
+		  if(isSorted){
+		      cout<<"Yes";
+		   }else{
+		      cout<<"No";
+		   }
+	   }
+
+	  static void secondMax(vector<long long >vs){
+
+		  sort(vs.begin(),vs.end());
+		  cout<<vs[vs.size()-2];
+	   }
+
+	  static void removeDuplicates(vector<long long >&vs){
+
+		 
+				     
+	  }
+
+	  static void Evenindex(vector<long long>vs){
+
+		  long long index=0;
+
+		  for(long long i=0;i<vs.size();i++){
+			  if(vs[i]%2==0){
+			      cout<<i<<" ";
+			     }
+		   }
+	   }
+
+	  static void oddIndex(vector<long long>&vs){
+
+		  long long index=0;
+
+		  for(long long i=0;i<vs.size();i++){
+			  if(vs[i]%2==1){
+			     cout<<i<<" ";
+			    }
+			 }
+	  }
+
+	  static void Avgs(vector<long long>&vs){
+
+		long long sums=0;
+
+		for(long long i=0; i<vs.size();i++){
+		       sums+=vs[i];
+		      }
+
+		  long long avg=sums/vs.size();
+		  cout<<avg<<endl;
+	  }
+
+	  static void leftRotate(vector<long long>&arr,int k){
+
+		  rotate(arr.begin(),arr.begin()+k,arr.end());
+	   }
+
+	   static void rightRotate(vector<long long>&arr,int k){
+
+		 k%=arr.size();
+		 rotate(arr.begin(),arr.begin()-k,arr.end());
+	   }
+
+	   static void Merge(vector<long long  >&old,vector<long long >&newarr){
+		   for(long long i:old){
+			 newarr.push_back(i);
+	 	      }
+		    sort(newarr.begin(),newarr.end());
+	   }
+	   static void freqs(vector<int>&vs){
+
+		   map<int,int>t;
+
+		   for(int x:vs){
+			 t[x]++;
+		     }
+
+		   for(auto i:t){
+			 cout<<i.first<<" "<<i.second<<endl;
+		   }
+	   }
+
+	   static void searchof(vector<int>&vs,int target){
+
+		       bool isFound=false;
+                       
+		       for(int i=0;i<vs.size();i++){
+			      if(vs[i]==target){
+				   isFound=true;
+				   break;
+				 }
+			     }
+
+		       if(isFound){
+			    cout<<"YES";
+			  }else{
+			    cout<<"NO";
+       			  }
+		  }
+	   static void BinarySearch(vector<int>&vs){
+
+
+	    }
+
+	   static void Ispalindrom(vector<int>&vs){
+
+		    int left=0;
+		    int right=vs.size()-1;
+		    bool ispali=true;
+
+		    while(left<right){
+			  if(vs[left]!=vs[right]){
+			     ispali=false;
+			     break;
+			   }
+			  left++;
+			  right--;
+		       }
+
+		    if(ispali){
+			cout<<"YES"<<endl;
+		     }else{
+			cout<<"NO"<<endl;
+		     }
+		}
+	   static void firstpreted(vector<int>&vs){
+
+		     map<int,int>mp;
+
+		     for(int i:vs){
+		           mp[i]++;
+			}
+		     for(auto i:vs){
+			 if(mp[i]>=2){
+			   cout<<i;
+			   break;
+			 }
+		      }
+		}
+
+	   static void nonpreated(vector<int>&vs){
+
+		   map<int,int>mp;
+		   for(int i:vs){
+			 mp[i]++;
+		      }
+		   for(int  i:vs){
+			 if(mp[i]==1){
+			  cout<<i;
+			  break;
+			}
+		    }
+	   }
+
+	   static void countDuplicate(vector<int>&vs){
+
+		   int count=0;
+		   map<int,int>mp;
+		   for(int i:vs){
+			mp[i]++;
+		    }
+
+		   vector<int>vt;
+
+		  cout<<vt.size()<<endl;
+	    }
+	
 	  static void inputarr(){
  
 		 int T;
@@ -110,26 +288,24 @@ class Codechef{
 		 int r;
 		 string s;
 		 cin>>n;
-                 vector<long long>t;
+                  vector<int>t;
+		  vector<int>m;
+
+		 cout<<"input arr1:";
 		 for(int i=0;i<n;i++){
 			 int x;
 			 cin>>x;
 			 t.push_back(x);
 		   }
 
-		    reverseArr(t);
-		    for(long i:t){
-			 cout<<i<<" ";
-			}
-		    t.clear();
+		   countDuplicate(t); 
+		   t.clear();
 	        } 
 	    }
 	 static void input(){
-
 		   int T;
 		   cin>>T;
 		     while(T--){
-			
                        }
 		    }	     
 };
