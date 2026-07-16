@@ -146,7 +146,6 @@ class Codechef{
 			            if(i==mins)
 			               count++;
 		                 }
-
 		   if(count%2==1){
 			cout<<"Lucky";
 		    }else{
@@ -154,7 +153,6 @@ class Codechef{
 		    }
 
 	  }
-
 	  static void sumofDigit(long long n,long long x){
 
 		 long long sums=0;

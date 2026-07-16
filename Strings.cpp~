@@ -15,7 +15,9 @@ class Codechef{
 
 	      }
 	  static void solve(int n){
-		 
+		
+		   long long sum=0;
+
 		   while(n!=0){
 
 			 int k=n%10;

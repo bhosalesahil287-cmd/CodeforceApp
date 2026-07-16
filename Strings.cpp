@@ -16,17 +16,7 @@ class Codechef{
 	      }
 	  static void solve(int n){
 		
-		   long long sum=0;
-
-		   while(n!=0){
-
-			 int k=n%10;
-			 sums+=k;
-			 n/10;
-		     }
-
-		   cout<<sums<<endl;
-	  }
+            }
 	  static void inputarr(){
  
 		 int T;
