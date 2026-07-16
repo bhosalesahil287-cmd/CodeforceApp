@@ -21,9 +21,85 @@ class Codechef{
 		   for(long long i:vs){
 			 sums+=i;
 			}
-
 		   cout<<sums<<endl;
 	     }
+	   static void maxi(vector<long long >&vs){
+
+		  long long maxi=vs[0];
+
+		  for(long long i:vs){
+			if(i>maxi){
+		           maxi=i;   
+		      }
+	           }  
+
+	        cout<<maxi<<endl;
+	   }
+	   static void mini(vector<long long>&vs){
+
+		   long long minis=vs[0];
+		   for(long long i:vs){
+
+			 if(i<minis){
+			   minis=i;
+			  }
+			}
+
+		   cout<<minis<<endl;
+	   }
+
+	   static void countEvenOdd(vector<long long>vs){
+
+		   long long counteven=0;
+		   long long countodd=0;
+
+		   for(long long i:vs){
+			 if(i%2==0){
+		          counteven++;
+		     }else{
+			  countodd++;
+			}
+		    }
+		        cout<<counteven<<endl;
+			cout<<countodd<<endl;
+
+	           }
+	   static void stateDigit(vector<long long>&vs){
+
+		     long long countneg=0;
+		     long long countpos=0;
+		     long long countZero=0;
+
+		     for(long long i:vs){
+
+			   if(i==0){
+			       countZero++;
+			   }else if(i>0){
+			      countpos++;
+			   }else if(i<0){
+			      countneg++;
+			     }
+		           }
+
+		         cout<<countZero<<endl;
+			 cout<<countpos<<endl;
+			 cout<<countneg<<endl;
+		    }
+
+	  static void reverseArr(vector<long long>&vs){
+
+		  long long left=0;
+		  long long right=vs.size()-1;
+
+		  while(left<right){
+			long long temp=vs[right];
+			vs[right]=vs[left];
+			vs[left]=temp;
+			left++;
+			right--;
+		  }
+	   }
+
 	  static void inputarr(){
  
 		 int T;
@@ -41,7 +117,10 @@ class Codechef{
 			 t.push_back(x);
 		   }
 
-		    Sums(t);
+		    reverseArr(t);
+		    for(long i:t){
+			 cout<<i<<" ";
+			}
 		    t.clear();
 	        } 
 	    }
