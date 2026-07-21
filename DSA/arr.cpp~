@@ -187,7 +187,6 @@ class Codechef{
 		   for(int x:vs){
 			 t[x]++;
 		     }
-
 		   for(auto i:t){
 			 cout<<i.first<<" "<<i.second<<endl;
 		   }
@@ -211,7 +210,6 @@ class Codechef{
        			  }
 		  }
 	   static void BinarySearch(vector<int>&vs){
-
 
 	    }
 
@@ -277,7 +275,7 @@ class Codechef{
 
 		  cout<<vt.size()<<endl;
 	    }
-
+	
 	  static void inputarr(){
  
 		 int T;
