@@ -91,7 +91,7 @@ class Xor{
 class Bitmask{
 
        public:
-	  
+
 	     static void input(){
 		long long num1;
 		long long num2;

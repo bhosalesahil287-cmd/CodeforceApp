@@ -34,7 +34,6 @@ class BitsManu{
 		 long long ans=num&num2;
 		 cout<<ans<<endl;
 	  }
-
 	  static void Ors(long long num1,long long num2){
 
 		  long long ans=num1|num2;
@@ -76,7 +75,10 @@ class BitsManu{
 };
 class Xor{
 
+
 	 public:
+
+         
 	 static void input(){
 
 		long long num1;
@@ -87,11 +89,12 @@ class Xor{
 
 		}
 	   }
+
+
 };
 class Bitmask{
 
        public:
-
 	     static void input(){
 		long long num1;
 		long long num2;
