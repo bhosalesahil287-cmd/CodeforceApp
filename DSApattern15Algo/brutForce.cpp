@@ -12,10 +12,9 @@ using namespace std;
 class Codechef{
 
 	public: 
-	  static void solve(long long a,long long b){	
+	  static void solve(){	
 
-		     long long ans=b+(b-1)/(a-1);
-		     cout<<ans<<endl;
+		     
 		}
 	  
 	  static void inputarr(){
