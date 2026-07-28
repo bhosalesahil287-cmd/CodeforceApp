@@ -7,12 +7,11 @@ class Node{
 
 	public:
 	    Node(long long data){
-		   data=data;
+		   this->data=data;
 		   next=NULL;
 	         }
 };
 class LinkedList{
-
 	public:
 	  static void display(Node* head){
 		  Node* temp=head;

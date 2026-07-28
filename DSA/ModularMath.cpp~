@@ -1,0 +1,13 @@
+#include<iostream>
+using namespace std;
+class Mod{
+	public:
+	  static void input(){
+
+	  }
+};
+int main(){
+
+	Mod::input();
+
+}

@@ -9,7 +9,7 @@
 #define  P  31      
 typedef long long ll;
 using namespace std;
-class Codechef{
+class Codeforce{
 
 	public:
 	  static void solve(){	
@@ -270,45 +270,146 @@ class Codechef{
 		   for(int i:vs){
 			mp[i]++;
 		    }
-
 		   vector<int>vt;
-
 		  cout<<vt.size()<<endl;
 	    }
-	
-	  static void inputarr(){
- 
-		 int T;
-		 cin>>T;
+	  
+	  static void sumofdigit(long long N,string digit){
 
-		 while(T--){
+		   long long sums=0;
+
+		   for(long long i=0;i<N;i++){
+
+			   char x=digit[i];
+			   sums+=x-'0';
+			   }
+
+		     cout<<sums<<endl;
+	  }
+
+	  static void replaceMinMax(vector<long long>&vs){
+
+		   long long mins=vs[0];
+		   long long maxi=vs[0];
+
+		   for(long long i:vs){
+			 if(i<mins){
+			   mins=i;
+			  }
+			}
+
+		   for(long long i:vs){
+			  if(i>maxi){
+			     maxi=i;
+			    }
+			 }
+
+		   for(long long i=0;i<vs.size();i++){	  
+
+			     if(vs[i]==maxi){
+				 vs[i]=mins;
+			     }else if(vs[i]==mins){
+				 vs[i]=maxi;
+			     }
+		   }
+
+		   for(long long i:vs){
+			  cout<<i<<" ";
+		   }
+	   }
+
+	  static void  cheakcode(int a,int b,string s){
+
+		
+	  }
+
+	  static long long  fabonaci(long long num1){
+
+		  if(num1==1){
+		       return 0;
+		   }else if(num1==0){
+		       return 1;
+		      }
+
+		  return fabonaci(num1-1)+fabonaci(num1-2);
+	  }
+
+	  static long long fab2(int num){
+
+	       if(num==1){
+		       return 0;
+		   }
+	       if(num==2){
+		      return 1;
+		     }
+
+	        long long prev1=1;
+		long long prev2=0;
+
+		 for(int i=3;i<=num;i++){
+
+		       long long curr=prev1+prev2;
+		       prev2=prev1;
+		       prev1=curr;
+
+		      }
+		 return prev1;
+
+	  
+	  }
+
+	  static void MinimizNumber(vector<long long>&vs){
+
+		    int count=0;
+
+		    int ans=INT_MAX;
+	                   for(long long i:vs){
+				   count=0;
+				while(i%2==0){
+			             i/=2;
+				       count++;
+				   }
+				  ans=min(count,ans);
+			       }
+	    	      cout<<ans;
+          }
+
+	    static void countSubArr(vector<long long>vs){
+
+                      int count=0;
+		      for(int i=0;vs.size()-1;i++){
+			         count=0;
+			   for(int j=0;j<i;j++){
+				 cout<<vs[j]<<" ";
+			}
+			 cout<<endl;
+		     }
+	        }
+
+	 	 static void inputarr(){
 	         int n;
-		 int r;
-		 string s;
 		 cin>>n;
-                  vector<int>t;
-		  vector<int>m;
+                 vector<long long>t;
 
-		 cout<<"input arr1:";
 		 for(int i=0;i<n;i++){
 			 int x;
 			 cin>>x;
 			 t.push_back(x);
 		   }
 
-		   countDuplicate(t); 
+                   countSubArr(t);
 		   t.clear();
-	        } 
 	    }
 	 static void input(){
-		   int T;
-		   cin>>T;
-		     while(T--){
-                       }
+
+			int num;
+		        cin>>num;
+		        cout<<fab2(num);
 		    }	     
 };
 int main(){
 
-	 Codechef::inputarr();
+	 Codeforce::inputarr();
+
 
 }
